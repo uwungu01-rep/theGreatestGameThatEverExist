@@ -70,13 +70,13 @@ def main() -> None:
             move = input(f"{display_board}\n{current}'s move: ").strip()
             clear()
 
-            if not isInt(move):
-                print("Invalid input: Input has to be a valid integer. \n")
-                continue
-            elif not move:
+            if not move:
                 print("Invalid input: Empty input. \n")
                 continue
-            elif int(move) not in range(1, 9):
+            elif not isInt(move):
+                print("Invalid input: Input has to be a valid integer. \n")
+                continue
+            elif int(move) not in range(1, 10):
                 print("Invalid input: Input has to be from 1 to 9. \n")
                 continue
             elif board[int(move) - 1] != "#":
