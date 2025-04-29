@@ -51,7 +51,7 @@ def main() -> None:
             diagonal: list[list[str]] = getDiagonal(rows)
             display_board: str = "\n---------\n".join([" | ".join(i) for i in rows])
 
-            if turn >= 3:
+            if turn >= 5:
                 temp: list[list[list[str]]] = [rows, columns, diagonal]
                 winner: str = "#"
                 for i in temp:
